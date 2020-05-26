@@ -1,0 +1,27 @@
+.card__container {
+    color: yellow;
+    margin: 1em;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 1.5fr 1fr 1fr 1.5fr / 1fr;
+    max-width: 400px;
+}
+
+.card__name {
+    justify-self: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.btn__fav {
+    background: none;
+    border: none;
+    color: yellow;
+    font-size: 2em;
+    max-width: 30px;
+    justify-self: center;
+}
+
+.btn__fav:hover {
+    text-shadow: 1px 1px 2px black, 0 0 15px yellow, 0 0 5px rgba(255, 255, 0, 0.4);
+}
