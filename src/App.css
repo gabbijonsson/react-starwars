@@ -1,21 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   letter-spacing: 0.1em;
 }
 
 body {
-  background-color: #210D28;
+  background-color: #210d28;
 }
 
-.infocard__container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
+button:focus {
+  outline: none;
 }

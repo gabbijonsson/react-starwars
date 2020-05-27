@@ -1,48 +1,25 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
-import InfoCard from "./components/Main/InfoCard";
-import ApiHandler from "./components/ApiHandler";
+import PeopleList from "./components/Main/PeopleList";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [view, setView] = useState("everyone");
   const [favorites, setFavorite] = useState([]);
-  const [people, setPeople] = useState([
-    {
-      name: "Luke Skywalker",
-      birth_year: "19BBY",
-      gender: "male",
-      id: 1,
-    },
-    {
-      name: "C-3PO",
-      birth_year: "112BBY",
-      gender: "n/a",
-      id: 2,
-    },
-    {
-      name: "R2-D2",
-      birth_year: "33BBY",
-      gender: "n/a",
-      id: 3,
-    },
-    {
-      name: "Darth Vader",
-      birth_year: "41.9BBY",
-      gender: "male",
-      id: 4,
-    },
-  ]);
 
   return (
     <div className="App">
-      <Header />
-      <div className="infocard__container">
-        {people.map((person) => (
-          <InfoCard key={person.id} people={person} />
-        ))}
-        ;
-      </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/everyone">
+            <PeopleList />
+          </Route>
+          <Route path="/favorites">
+            <div className="infocard__container">HELLO</div>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

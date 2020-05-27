@@ -2,7 +2,6 @@ import React from "react";
 import "./InfoCard.css";
 
 const InfoCard = (props) => {
-  console.log(JSON.stringify(props));
   return (
     <>
       <div className="card__container">
