@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import InfoCard from "./components/Main/InfoCard";
+import ApiHandler from "./components/ApiHandler";
 
 function App() {
-  const PEOPLE = [
+  const [view, setView] = useState("everyone");
+  const [favorites, setFavorite] = useState([]);
+  const [people, setPeople] = useState([
     {
       name: "Luke Skywalker",
       birth_year: "19BBY",
@@ -29,11 +32,17 @@ function App() {
       gender: "male",
       id: 4,
     },
-  ];
+  ]);
+
   return (
     <div className="App">
       <Header />
-      <InfoCard people={PEOPLE} />
+      <div className="infocard__container">
+        {people.map((person) => (
+          <InfoCard key={person.id} people={person} />
+        ))}
+        ;
+      </div>
     </div>
   );
 }
