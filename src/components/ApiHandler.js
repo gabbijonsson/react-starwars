@@ -12,12 +12,43 @@ function getPeople(callback) {
 }
 
 function getFavorites() {
-  localStorage.getItem("favorites");
+  let currentFavorite = localStorage.getItem("favorites");
+  if (!currentFavorite) {
+    return null;
+  } else {
+    return JSON.parse(currentFavorite);
+  }
+}
+
+function addFavorite(favorite) {
+  favorite.isFavorite = true;
+  let currentFavorite = getFavorites();
+  if (currentFavorite == null) {
+    currentFavorite = [];
+  }
+  currentFavorite.push(favorite);
+  localStorage.setItem("favorites", JSON.stringify(currentFavorite));
+}
+
+function removeFavorite(favorite) {
+  let currentFavorite = getFavorites();
+  console.log("Current fav is", currentFavorite);
+  if (currentFavorite != null) {
+    let i = currentFavorite.findIndex(
+      (person) => person.name === favorite.name
+    );
+    console.log("indexOf ", favorite.name, i);
+
+    currentFavorite.splice(i, 1);
+    localStorage.setItem("favorites", JSON.stringify(currentFavorite));
+  }
 }
 
 const API_HANDLER = {
   getPeople,
   getFavorites,
+  addFavorite,
+  removeFavorite,
 };
 
 export default API_HANDLER;
