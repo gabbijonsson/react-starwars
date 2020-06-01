@@ -30,7 +30,7 @@ function PeopleList(props) {
           shouldToggleFavoriteStatus={true}
         />
       ))}
-      ;
+      
     </div>
   );
 }
