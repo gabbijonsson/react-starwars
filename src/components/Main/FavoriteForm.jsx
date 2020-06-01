@@ -36,7 +36,7 @@ function FavoriteForm() {
         ref={register}
       />
       <label htmlFor="birth_year" className="labelbirthyear">
-        BIRTH YEAR (BBY / ABY)
+        BIRTH YEAR (INCLUDE BBY OR ABY)
       </label>
 
       <input
@@ -46,7 +46,7 @@ function FavoriteForm() {
         placeholder="Enter birth year..."
         ref={register}
       />
-      <input type="submit" className="submitbutton" />
+      <input type="submit" className="submitbutton" value="SEND"/>
     </form>
   );
 }
