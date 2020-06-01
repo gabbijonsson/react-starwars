@@ -8,7 +8,7 @@ const Header = (props) => {
 
   return (
     <div className="header__container">
-      <h1 className="header__container-title">SW DB</h1>
+      <h1 className="header__container-title">Mu na ya</h1>
       <NavBar setVisibilityStatus={setVisibilityStatus} />
       <SearchField visibilityStatus={visibilityStatus} setSearchTerm={props.setSearchTerm}/>
     </div>
