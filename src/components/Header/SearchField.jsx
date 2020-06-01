@@ -6,7 +6,7 @@ const SearchField = (props) => {
   }
   return (
     <>
-      <input className="searchfield__input" placeholder="Search..." onKeyUp={handleKeyUp}/>
+      <input className={`searchfield__input ${props.visibilityStatus ? "" : "hidden"}`} placeholder="Search..." onKeyUp={handleKeyUp}/>
     </>
   );
 };

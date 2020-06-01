@@ -81,6 +81,10 @@
   grid-area: search;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 @media (min-width: 580px) {
   .header__container {
     grid-template-areas:

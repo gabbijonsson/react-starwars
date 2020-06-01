@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [everyoneSelected, setEveryoneSelected] = useState(false);
   const [favoritesSelected, setFavoriteSelected] = useState(false);
   const [addFavoriteSelected, setAddFavoriteSelected] = useState(false);
@@ -14,6 +14,7 @@ const NavBar = () => {
             setEveryoneSelected(true);
             setFavoriteSelected(false);
             setAddFavoriteSelected(false);
+            props.setVisibilityStatus(true);
           }}
           className={`navbar__button ${everyoneSelected ? "selected" : ""}`}
         >
@@ -26,6 +27,7 @@ const NavBar = () => {
             setEveryoneSelected(false);
             setFavoriteSelected(true);
             setAddFavoriteSelected(false);
+            props.setVisibilityStatus(false);
           }}
           className={`navbar__button ${favoritesSelected ? "selected" : ""}`}
         >
@@ -38,6 +40,7 @@ const NavBar = () => {
             setEveryoneSelected(false);
             setFavoriteSelected(false);
             setAddFavoriteSelected(true);
+            props.setVisibilityStatus(false);
           }}
           className={`navbar__button ${addFavoriteSelected ? "selected" : ""}`}
         >
