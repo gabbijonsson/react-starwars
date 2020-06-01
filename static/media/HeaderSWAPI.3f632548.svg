@@ -1,0 +1,20 @@
+<svg width="2133" height="268" viewBox="0 0 2133 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="2133" height="268" fill="white"/>
+<rect width="2133" height="268" fill="url(#paint0_linear)"/>
+<path d="M1252.5 220L1238 239V240.5H1239.5L1249 230.5L1252 230L1243 252.5H1251L1250.5 261L1247 268.5H1250L1254 261L1256 252.5H1260.5L1261.5 268.5H1263.5L1264 266L1265 257V256V232L1273 241.5L1273.5 240.5L1265 222.5L1260.5 219.5V217L1261.5 215.5L1263 212.5L1262 209L1257 207L1250.5 211V214H1252.5V214.5L1251.5 215.5L1251 217H1255L1256 219.5L1252.5 220Z" fill="#210D28"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1097 223.5C1097 224.338 1096.98 225.171 1096.93 226H1119V269H1068.64H979.36H929V226H951.068C951.023 225.171 951 224.338 951 223.5C951 191.744 983.683 166 1024 166C1064.32 166 1097 191.744 1097 223.5Z" fill="#210D28"/>
+<circle cx="1855" cy="53" r="38" fill="#DDCA92"/>
+<circle cx="1976" cy="165" r="38" fill="#D99E36"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2052.59 189H2055.59V219H2057.59V232H2060.59V250H2058.59V260.423L2063.19 268H2058.59H2049.59H2045L2049.59 260.423V250H2047.59V232H2050.59V219H2052.59V189Z" fill="#210D28"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="1066.5" y1="0" x2="1066.5" y2="268" gradientUnits="userSpaceOnUse">
+<stop stop-color="#744A72"/>
+<stop offset="1" stop-color="#AF4A59"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="2133" height="268" fill="white"/>
+</clipPath>
+</defs>
+</svg>
