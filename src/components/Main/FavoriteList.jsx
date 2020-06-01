@@ -15,14 +15,14 @@ function FavoriteList() {
     updateFavorites();
   }, []);
 
-  if (favorite) {
+  if (favorite && favorite.length > 0) {
     return (
       <div className="infocard__container">
         {favorite.map((person) => (
           <InfoCard
             key={favorite.indexOf(person)}
             person={person}
-            updateFavorites={updateFavorites}
+            onUnfavorite={updateFavorites}
           />
         ))}
       </div>

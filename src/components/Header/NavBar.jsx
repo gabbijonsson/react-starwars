@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [everyoneSelected, setEveryoneSelected] = useState(false);
   const [favoritesSelected, setFavoriteSelected] = useState(false);
+  const [addFavoriteSelected, setAddFavoriteSelected] = useState(false);
 
   return (
     <>
-      <Link to="/everyone" className="navbar__link-everyone">
+      <Link to="/" className="navbar__link-everyone">
         <button
           onClick={() => {
             setEveryoneSelected(true);
             setFavoriteSelected(false);
+            setAddFavoriteSelected(false);
           }}
           className={`navbar__button ${everyoneSelected ? "selected" : ""}`}
         >
@@ -24,10 +25,23 @@ const NavBar = () => {
           onClick={() => {
             setEveryoneSelected(false);
             setFavoriteSelected(true);
+            setAddFavoriteSelected(false);
           }}
           className={`navbar__button ${favoritesSelected ? "selected" : ""}`}
         >
           Favorites
+        </button>
+      </Link>
+      <Link to="/addfavorite" className="navbar__link-addfavorite">
+        <button
+          onClick={() => {
+            setEveryoneSelected(false);
+            setFavoriteSelected(false);
+            setAddFavoriteSelected(true);
+          }}
+          className={`navbar__button ${addFavoriteSelected ? "selected" : ""}`}
+        >
+          +
         </button>
       </Link>
     </>

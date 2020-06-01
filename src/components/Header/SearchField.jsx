@@ -1,10 +1,12 @@
 import React from "react";
-import "./SearchField.css";
 
-const SearchField = () => {
+const SearchField = (props) => {
+  const handleKeyUp = (e) => {
+    props.setSearchTerm(e.target.value)
+  }
   return (
     <>
-      <input className="searchfield__input" placeholder="Search..."></input>
+      <input className="searchfield__input" placeholder="Search..." onKeyUp={handleKeyUp}/>
     </>
   );
 };

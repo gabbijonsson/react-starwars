@@ -1,0 +1,76 @@
+form {
+  margin-top: 2em;
+  display: grid;
+  gap: 0.4em;
+  grid-template-areas:
+    "labelname"
+    "inputname"
+    "labelgender"
+    "inputgender"
+    "labelbirthyear"
+    "inputbirthyear"
+    "buttonsubmit";
+  place-items: center;
+}
+
+.addfavorite__input {
+  margin-bottom: 1.6em;
+  padding: 0.7em;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgb(33, 13, 40);
+  border-radius: 0.4em;
+  position: relative;
+  overflow: hidden;
+  background: rgba(175, 74, 89, 0.7);
+  min-width: 300px;
+}
+
+label {
+  color: yellow;
+  font-size: 1.5em;
+}
+
+.labelname {
+  grid-area: labelname;
+}
+
+.labelgender {
+  grid-area: labelgender;
+}
+.labelbirthyear {
+  grid-area: labelbirthyear;
+}
+
+.inputname {
+  grid-area: inputname;
+}
+
+.inputgender {
+  grid-area: inputgender;
+}
+
+.inputbirthyear {
+  grid-area: inputbirthyear;
+}
+
+.submitbutton {
+  grid-area: buttonsubmit;
+  font-family: "Cabin Sketch", cursive;
+  font-weight: 700;
+  color: yellow;
+  padding: 0.7em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgb(175, 74, 89);
+  border-radius: 0.4em;
+  position: relative;
+  overflow: hidden;
+  background: rgba(175, 74, 89, 0.7);
+}
+
+.submitbutton:hover {
+  box-shadow: 1px 1px 15px 5px rgba(175, 74, 89, 0.4);
+}

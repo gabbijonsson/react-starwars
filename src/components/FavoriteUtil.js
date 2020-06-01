@@ -3,8 +3,11 @@ import ApiHandler from "./ApiHandler";
 function updateFavoriteStatus(people) {
   let favorites = ApiHandler.getFavorites();
   people.forEach((person) => {
-    if (favorites.includes(person)) {
-      person.isFavorite = true;
+    if (favorites) {
+      let i = favorites.findIndex((favorite) => favorite.name === person.name);
+      if (i >= 0) {
+        person.isFavorite = true;
+      }
     }
   });
 }
